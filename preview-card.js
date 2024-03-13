@@ -7,14 +7,14 @@ let grid = document.createElement('div')
 grid.classList.add('grid')
 container.append(grid)
 
-let img = document.createElement('div')
-img.classList.add('img')
-grid.append(img)
-
-let image = document.createElement('img')
-image.setAttribute('src', 'image-product-desktop.jpg')
-image.setAttribute('alt', 'perfume')
+let image = document.createElement('div')
+image.classList.add('img')
 grid.append(image)
+
+let img = document.createElement('img')
+img.setAttribute('src', 'image-product-desktop.jpg')
+img.setAttribute('alt', 'perfume')
+image.append(img)
 
 let  cardContent = document.createElement('div')
 cardContent.classList.add('card-content')
@@ -51,10 +51,11 @@ price.append(previousPrice)
 
 let cartBtn = document.createElement('button')
 cartBtn.classList.add('cart-image')
-price.append(cartBtn)
+price.after(cartBtn)
 
 let buttonImage = document.createElement('img')
 buttonImage.setAttribute('src', 'icon-cart.svg')
+buttonImage.setAttribute('alt', 'icon-cart')
 cartBtn.textContent = "Add to Cart"
 cartBtn.append(buttonImage)
 {/* <div class="container">
